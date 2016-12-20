@@ -53,10 +53,9 @@
 >引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的<span style="color:red">子</span>元素进行<span style="color:red">排列、对齐和分配空白空间。</span>
 - 文字特效
 	- 文字阴影（text-shadow）
-	- 文字
+	- 文字模糊
 - 2D/3D转换
 - 动画
 - 多列布局
-- 用户界面
 
 	[示例代码](./code/css3.html)
