@@ -52,5 +52,48 @@
 			can.stroke(); // 开始画
 	</script>
 
+
+
+	<hr>
+	<h1>svg</h1>
+	<style>.svg_left{float: left;}</style>
+	<div class="svg_left">
+	svg
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+		<polygon points="100,10 40,180 190,60 10,60 160,180"
+			style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+		</svg>
+	</div>
+	<div class="svg_left">
+		img
+		<img src="../images/star.png" alt="">
+	</div>
+	<div style="clear:both"></div>
+
+ 	<hr>
+ 	<h1>获取地理位置</h1>
+	<p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+	<button onclick="getLocation()">点我</button>
+	<script>
+	var x=document.getElementById("demo");
+	function getLocation()
+	{
+		if (navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(function(position)
+			{
+				console.log(position);
+				x.innerHTML="纬度: " + position.coords.latitude + 
+				"<br>经度: " + position.coords.longitude + 
+				"<br /><a href='http://www.gpsspg.com/maps.htm' target='_blank'>查询:"+position.coords.latitude+','+position.coords.longitude+"</a>";
+			});
+		}
+		else
+		{
+			x.innerHTML="该浏览器不支持获取地理位置。";
+		}
+	}
+	</script>
+
 </body>
 </html>
