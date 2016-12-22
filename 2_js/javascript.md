@@ -33,6 +33,7 @@ JavaScript 区分大小写，使用 Unicode 字符集。
 ### 注释
 >注释的语法跟 C++ 和 JAVA 、PHP 等许多其他语言相同：
 
+```javascript
 	// 单行注释
 	---
 	/* 这是一个多行注释
@@ -46,7 +47,7 @@ JavaScript 区分大小写，使用 Unicode 字符集。
 	 */
 	---
 	/* 但是, 你不能, /* 嵌套注释 */ 语法错误 */
-
+```
 ### 变量声明
 - **<span style="color: red">var</span> （声明一个变量，可选择将其初始化为一个值。）**
 - let （声明一个块作用域的<span style="color:red">局部变量</span>(block scope local variable)，可选择将其初始化为一个值。）
@@ -57,3 +58,82 @@ JavaScript 区分大小写，使用 Unicode 字符集。
 合法的标识符示例：Yexk_name，yexk99 , $yexk 和 _yexk 。
 [示例代码](./code/javascript_var.html)
 
+###数据结构和类型
+JavaScript语言可以识别下面 7 种不同类型的值：
+
+- 六种 <span style="color:red">原型</span> 数据类型:
+	- `Boolean`. 布尔值，true 和 false.
+	- `null`. 一个表明 null 值的特殊关键字。JavaScript 是大小写敏感的，因此 null 与 Null、NULL或其他变量完全不同。
+	- `undefined`. 变量未定义时的属性。
+	- `Number`. 表示数字，例如： 42 或者 3.14159。
+	- `String`. 表示字符串，例如："Howdy"
+	- `Symbol`. ( 在 ECMAScript 6 中新添加的类型 )。一种数据类型，它的实例是唯一且不可改变的。
+- 一种 `Object` 对象类型
+
+数据类型的转换(Data type conversion)
+
+```javascript
+	// 算式的加减
+	var x = 100;
+	var y = "200";
+	var z = x + y; 
+	// var z = '我的计算结果是：'+ x + y; 
+
+	// 数字和undefined加减
+	var x;
+	var y = '100';
+	var z = x + y;
+```
+
+1.（运算符转换） 字符串转数值型 ` + ` 
+> 一般用的比较少，因为很容易混淆。
+
+```javascript
+	var x = 100;
+	var y = "200";
+	var z = x + (+y); 
+```
+
+**<span style="color:blue;">2.（函数转换）字符串转数值型 parseInt()和parseFloat() </span>**
+> parseInt把值转换成整数，parseFloat把值转换成浮点数。只有对<span style="color:red">String类型调用这些方法</span>，这两个函数才能正确运行；对其他类型返回的都是NaN(Not a Number)。  
+
+```javascript
+	parseInt("1234blue");   //return   1234 
+	parseInt("0xA");        //return   10 
+	parseInt("22.5");       //return   22 
+	parseInt("blue");       //return   NaN
+	// 进制直接的转换
+	parseInt("10", 2);      //return   2 
+	parseInt("10", 8);      //return   8 
+	parseInt("10", 10);     //return   10 
+```
+3. (强制转换) 转任意类型 Number() 、Boolean() 、String()
+
+```javascript
+	Number(false);	        // return  0 
+	Number(true);	        // return  1 
+	Number(undefined);	    // return  NaN 
+	Number(null);	        // return  0 
+	Number( "5.5 ");	    // return  5.5 
+	Number( "56 ");	        // return  56 
+	Number( "5.6.7 ");	    // return  NaN 
+	Number(new   Object());	// return  NaN 
+	Number(100);	        // return  100  
+```
+
+4.（加引号转换）字符串转数值型 toString()
+>一般不改变原来的值的状态直接给数据加上引号。<span style="color:red">（数值型、undefined、null没有toString()函数）</span>
+
+```javascript 
+	true.toString();         // return "true"
+	false.toString();        // return "false"
+	['1','2',3].toString();  // return "1,2,3"
+	new Object().toString(); // return "[object Object]"
+	// 数值型、undefined、null没有toString()函数
+	100.toString();          // Uncaught SyntaxError: Invalid or unexpected token
+	undefined.toString();    // Uncaught TypeError: Cannot read property 'toString' of undefined
+	null.toString();         // Uncaught TypeError: Cannot read property 'toString' of null
+```
+
+###字面量 (Literals)
+>在JavaScript中，你可以使用各种字面量。这些字面量是脚本中按字面意思给出的固定的值，而不是变量。`其实就是语法格式`
