@@ -1,7 +1,7 @@
 [TOC]
 
 #JavaScript基础入门
-
+>推荐的学习网站 [MDN](https://developer.mozilla.org)
 ##JavaScript简介 <sup>[注](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Introduction)</sup>
 >什么是JavaScript？
 
@@ -441,15 +441,6 @@ labelCancelLoops: while (true) {
 >连续语句用于重新开始 while, do-while, for语句，或者标签语句（label statement）。
 
 [continue示例代码](./code/js_continue.html)
-
-
-
-##函数 <sup>[注](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions)</sup>
->函数是搭建JavaScript块的基本构件之一。一个函数本身就是一段JavaScript程序——包含用于执行某一任务或计算的一系列语句。要使用某一个函数，你必需在想要调用这个函数的执行域的某处定义它。
-
-###定义函数(Defining function)
-###函数的作用域(Function scope)
-
 
 
 ##数字和日期
