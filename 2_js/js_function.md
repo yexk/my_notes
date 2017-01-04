@@ -15,8 +15,9 @@
 	function square(number) {
 		return number * number;
 	}
+	// 函数square使用了一个参数，叫作number。这个函数只有一个语句，
+	// 它说明该函数会将函数的参数（即number）自乘后返回。
+	// 函数的return语句确定了函数的返回值。
 ```
 
 ###函数的作用域(Function scope)
-
-
