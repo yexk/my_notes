@@ -6,27 +6,34 @@
 </head>
 <body>
 	<script>
-
 		// 普通函数
 		function ye_show()
 		{
-			alert('我是普通函数');
+			document.writeln('我是普通函数');
+			console.log('我是普通函数');
 		}
+		ye_show();
+		// ye_show_0();
 		// 匿名函数
 		var ye_show_0 = function() {
+			document.writeln('我是匿名函数');
 			console.log('我是匿名函数');
 		}
+		ye_show_0();
 		// 生成器表达式函数
 		function* name() 
 		{
+			document.writeln('生成器表达式函数');
 			console.log('生成器表达式函数');
 		}
+		name();
 		// 箭头函数
 		var ye = () => 
 		{
-			alert(1)
+			document.writeln('我是箭头函数');
+			console.log('我是箭头函数');
 		}
-		
+		ye();
 	</script>
 </body>
 </html>

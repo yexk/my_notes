@@ -441,7 +441,3 @@ labelCancelLoops: while (true) {
 >连续语句用于重新开始 while, do-while, for语句，或者标签语句（label statement）。
 
 [continue示例代码](./code/js_continue.html)
-
-
-##数字和日期
-##文本格式化
