@@ -251,3 +251,60 @@
         return substr($str,0,$length); 
     }
 ```
+
+###9. mask地址类型转换
+mask地址的类型转换，比如255.255.255.0 => 32 
+```
+    /**
+     * 整形转字符型
+     * @Author Yexk
+     * @Date   2017-02-10
+     * @param  {Int}      $bit [数字类型：1-32]
+     * @return {String}        [mask字符串地址]
+     */
+    public static function maskbit2ip($bit)
+    {
+        $bit    = intval($bit);
+        $lan    = ((1<<$bit) -1)<<(32-$bit) ;
+        $lan    = str_split(''.decbin($lan), 8);
+        $maskip = bindec($lan[0]).'.'.bindec($lan[1]).'.'.bindec($lan[2]).'.'.bindec($lan[3]);
+
+        return $maskip;
+    }
+    
+    /**
+     * mask转整形
+     * @Author Yexk
+     * @Date   2017-02-10
+     * @param  {String}   $ip [字符型:255.255.255.0]
+     * @return {Int}          [返回整形]
+     */
+    public static function maskip2bit($ip)
+    {
+        $ips = explode('.',$ip);
+        if(!is_array($ips) || 4 != count($ips)){
+            return false;
+        }
+
+        $bit = (intval($ips[0])<<24) + (intval($ips[1])<<16) + (intval($ips[2])<<8) + intval($ips[3]);
+        $bit = decbin($bit);
+        $len = strlen($bit);
+        if(32 != $len){
+            return false;
+        }
+        $masklen = 0;
+        $flag    = '1';
+        for($i=0; $i<32; $i++){
+            if('1'==$bit[$i]){
+                $masklen++;
+                if('1'!=$flag){
+                    return false;
+                }
+            }
+            $flag=$bit[$i];
+        }
+
+        return $masklen;
+    }
+
+```
