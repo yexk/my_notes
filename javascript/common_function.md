@@ -72,3 +72,19 @@ function mac_int_to_string(str) {
     return !arguments[1] ? mac_str.toUpperCase() : mac_str ;
 }
 ```
+
+###4. js 重复输出某串字符
+```JavaScript
+    /**
+     * 重复输出某串字符
+     * @Author Yexk
+     * @Date   2017-03-01
+     * @param  {String}   str 需要被复制的字符串
+     * @param  {Number}   num 重复的次数
+     * @return {String}       返回结果
+     */
+    function str_repeat(str, num){
+        return new Array( num + 1 ).join( str ); 
+    }
+
+```
