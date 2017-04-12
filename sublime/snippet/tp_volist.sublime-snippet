@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+{volist name='${1:}' id='v'}
+	${2:}
+{/volist}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>volist</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+	<description>tp_volist</description>
+</snippet>

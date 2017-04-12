@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+location.href = ${1:location.href};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>href</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+	<description>javascript refresh</description>
+</snippet>
