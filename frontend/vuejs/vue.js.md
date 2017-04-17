@@ -29,7 +29,55 @@
 </body>
 </html>
 ```
-结果：
+
+结果： 
 ![images/vue_quick_start.jpg](images/vue_quick_start.jpg)
 
+#### 条件语句 ` v-if `
+```HTML
+<div id="app-1">
+  <p v-if="seen">改变seen的布尔值就可以显示或隐藏咯</p>
+</div>
+<script>
+	var app1 = new Vue({
+	  el: '#app-1',
+	  data: {
+	    seen: true
+	  }
+	})
+</script>
 
+```
+结果： 
+![images/vue_demo_v-if.jpg](images/vue_demo_v-if.jpg)
+
+
+#### 循环语句 ` v-for `
+```HTML
+<div id="app-2">
+  <ol>
+    <li v-for="demo in demos">
+      {{ demo.text }}
+    </li>
+  </ol>
+</div>
+<script>
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    demos: [
+      { text: '学习 JavaScript' },
+      { text: '学习 Vue' },
+      { text: '我的天啊。这是vue' }
+    ]
+  }
+})
+</script>
+> Tips: v-for="(value,key,index) in Object" 可以带三个参数进行
+
+```
+结果： 
+![images/vue_demo_v-for.jpg](images/vue_demo_v-for.jpg)
+
+
+> `Tips` : v-bind指令可以缩写为一个冒号，v-on指令可以缩写为@符号。
