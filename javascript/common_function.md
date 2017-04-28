@@ -88,3 +88,25 @@ function mac_int_to_string(str) {
     }
 
 ```
+###5. 获取get方式的值。
+```JavaScript
+    /**
+     * 获取get方式的键值对。
+     * @Author   Yexk
+     * @DateTime 2017-04-28
+     * @param    {String}   url 页面地址的url
+     * @return   {Aarry}        返回get的参数值
+     */
+    function getUrlVars(url)
+    {
+        var vars = [], hash;
+        var hashes = url.slice(url.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+```
