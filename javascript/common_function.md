@@ -389,3 +389,30 @@ function date(format, timestamp) {
 }
 
 ```
+
+###7. 从字符串末尾开始去掉字符。
+```JavaScript    
+/**
+ * 从末尾开始去掉字符串，保留前面的字符串。
+ * eg. 
+ * // var str = "sinaf012e3c9b658";
+ * var str = "baiduf012e3c9b658";
+ * console.log(str.last_substr(12)); // baidu  
+ *
+ * @Author Yexk
+ * @Date   2017-05-09
+ * @param  {Number}   len [需要裁剪的字符串长度]
+ * @return {String}       [返回裁剪后的字符串]
+ */
+String.prototype.last_substr = function(len) {
+    var t_arr = this.split('');
+    var length = t_arr.length;
+    for (var i = 0; i < length; i++) {
+        if (i>=len) break;
+            t_arr.pop();
+    }
+    return t_arr.join("");
+}
+
+```
+
