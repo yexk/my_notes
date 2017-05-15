@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div id="div">show</div>
+	<script>
+	function show() {
+		console.log('show');
+	}
+	
+	function show(x) {
+		console.log('show,'+x);
+	}
+	
+	function show(x,y) {
+		console.log('show,'+ x + ',' + y);
+	}
+
+	show();
+	show(100);
+	show(100,200);
+
+
+	// 很明显这种事不行的。。。
+	// 但是我确实有这样的需求那我该怎么处理呢？
+	
+	function show_arguments() {
+		console.log(arguments);
+		// switch (arguments.length)
+		// {
+		// 	case 1 :
+		// 	console.log(arguments[0]);
+		// 	break;
+		// 	case 2 :
+		// 	console.log(arguments[0]+arguments[1]);
+		// 	break;
+		// 	case 3 :
+		// 	console.log(arguments[0]+arguments[1]+arguments[2]);
+		// 	break;
+		// 	default :
+		// 		console.log('没有携带参数');
+		// 	break;
+		// }
+	}
+	
+	show_arguments();
+	show_arguments(100);
+	show_arguments(100,200);
+
+	var div = document.getElementById('div');
+	div.onclick = function(index,val){
+		console.log(arguments);
+		// var arr = ['a','b','c','d','e','f','g',];
+		// $.each(arr, function() {
+		// 	console.log(arguments);
+		// });
+	}
+
+
+	</script>
+</body>
+</html>

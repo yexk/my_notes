@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="show">
+		
+	</div>
+	<script>
+	for (var i = 0; i < 10; i++) {
+		if (i%2 == 0) continue;	
+		document.getElementById('show').innerHTML += i + '|';
+	}
+	</script>
+</body>
+</html>

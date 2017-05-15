@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{width: 100px;height: 100px;}
+		ul,li,ol{list-style: none;}
+		/* 选择器 */
+		#selector::before{content:'我是before';background: #ccc;}
+		#selector::after{content:'我是after';background: #ccc;}
+		#selector1::before{display: inline-block;width: 10px;height: 10px;content:'';border-top:1px solid blue;border-left:1px solid blue;-webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
+		#selector1::after{display: inline-block;width: 10px;height: 10px;content:'';border-top:1px solid blue;border-right: 1px solid blue;-webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+		
+		/* 边框 */
+		.border{border: 3px solid green;border-radius: 25%;text-align: center;}
+		/* 渐变 */
+		#grad {
+		  background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+		  background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+		  background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+		  background: linear-gradient(red, blue); /* 标准的语法 */
+		}
+		/* 弹性布局（弹性盒子） */
+		#ul{display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		border: 1px solid red;
+		}
+		#ul li{list-style: none;width: 50px;height: 50px;border: 1px solid #ccc;margin: auto;}
+		/* 普通盒子 */
+		#cul{border: 1px solid red;overflow: hidden;}
+		#cul li{float: left;list-style: none;width: 50px;height: 50px;border: 1px solid #ccc;margin:0 65px;}
+
+	</style>
+</head>
+<body>
+	<h3>选择器</h3>
+	<div id="selector">选择器</div>
+	<div id="selector1">图片轮播</div>
+
+	<h3>边框</h3>
+	<div class="border"></div>
+
+	<h3>渐变</h3>
+	<div id="grad"></div>
+
+	<h3>弹性布局（弹性盒子）</h3>
+	<ul id="ul">
+		<li>li1</li>
+		<li>li2</li>
+		<li>li3</li>
+		<li>li4</li>
+		<li>li5</li>
+		<li>li6</li>
+		<li>li7</li>
+		<li>li8</li>
+		<li>li9</li>
+		<li>li10</li>
+	</ul>
+
+	<h3>普通盒子</h3>
+	<ul id="cul">
+		<li>li1</li>
+		<li>li2</li>
+		<li>li3</li>
+		<li>li4</li>
+		<li>li5</li>
+		<li>li6</li>
+		<li>li7</li>
+		<li>li8</li>
+		<li>li9</li>
+		<li>li10</li>
+	</ul>
+
+	<h3>文字阴影</h3>
+	<p style="text-shadow: 10px 10px 5px grey;font-size: 18px">文字阴影文字阴影文字阴影文字阴影文字阴影</p>
+	
+	<!-- 3D转换 -->
+	<h3>开门效果</h3>
+	<style>
+		#open_door{border: 5px solid #815F50;width: 308px;height: 635px; perspective:600; -webkit-perspective:600; /* Safari and Chrome */}
+		#open_door img{transition: transform 2s;transform-origin:left;}
+		#open_door:hover img{transform: rotateY(45deg);}
+	</style>
+	<div id="open_door" >
+		<img src="../images/door.png" alt="">
+	</div>
+
+	<h3>正方体</h3>
+	<style>
+
+		.div_square{position: relative;perspective:600;-webkit-perspective:600;margin: 0 auto;text-align: center;}
+		.square{transition: all 10s;transform-style: preserve-3d;}
+		.square:hover{-webkit-transform: rotateX(360deg) rotateY(360deg);
+		-ms-transform: rotateX(360deg) rotateY(360deg);
+		-o-transform: rotateX(360deg) rotateY(360deg);
+		transform: rotateX(360deg) rotateY(360deg);}
+		.square li{width: 100px;height: 100px;position: absolute;transition: all 2s;}
+		.square li:nth-child(1){background-color: rgb(255,0,0);}
+		.square li:nth-child(2){background-color: rgb(0,255,0);-webkit-transform: rotateX(90deg);
+		-ms-transform: rotateX(90deg);
+		-o-transform: rotateX(90deg);
+		transform: rotateX(90deg);-webkit-transform-origin: bottom;
+		-moz-transform-origin: bottom;
+		-ms-transform-origin: bottom;
+		-o-transform-origin: bottom;
+		transform-origin: bottom;}
+		.square li:nth-child(3){background-color: rgb(0,0,255);-webkit-transform: translateZ(-100px);
+		-ms-transform: translateZ(-100px);
+		-o-transform: translateZ(-100px);
+		transform: translateZ(-100px);}
+		.square li:nth-child(4){background-color: rgb(255,255,0);-webkit-transform: rotateX(-90deg);
+		-ms-transform: rotateX(-90deg);
+		-o-transform: rotateX(-90deg);
+		transform: rotateX(-90deg);-webkit-transform-origin: bottom;
+		-moz-transform-origin: top;
+		-ms-transform-origin: top;
+		-o-transform-origin: top;
+		transform-origin: top;}
+
+		.square li:nth-child(5){background-color: rgb(255,0,255);-webkit-transform: rotateY(90deg);
+		-ms-transform: rotateY(90deg);
+		-o-transform: rotateY(90deg);
+		transform: rotateY(90deg);
+		transform-origin: left;}
+		.square li:nth-child(6){background-color: rgb(0,255,255);-webkit-transform: rotateY(-90deg);
+		-ms-transform: rotateY(-90deg);
+		-o-transform: rotateY(-90deg);
+		transform: rotateY(-90deg);
+		transform-origin: right;}
+
+	</style>
+	<div class="div_square">
+	<ul class="square">
+		<li>正面</li>
+		<li>底部</li>
+		<li>背面</li>
+		<li>顶部</li>
+		<li>左面</li>
+		<li>右面</li>
+	</ul>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

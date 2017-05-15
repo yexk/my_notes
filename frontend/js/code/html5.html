@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>div标签</h1>
+	<header>我是头部</header>
+	
+	<details>
+		<summary>HTML5</summary>
+		标准通用标记语言下的一个应用HTML标准自1999年12月发布的HTML4.01后，后继的HTML5和其它标准被束之高阁，为了推动Web标准化运动的发展，一些公司联合起来，成立了一个叫做 Web Hypertext Application Technology Working Group （Web超文本应用技术工作组 -WHATWG） 的组织。WHATWG 致力于 Web 表单和应用程序，而W3C（World Wide Web Consortium，万维网联盟） 专注于XHTML2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。
+	</details>
+
+	<hr>
+	<h1>input输入框</h1>
+	<form autocomplete="on">
+		First name: <input type="text" name="fname"  placeholder='我是html新增的属性' /><br />
+		Last name: <input type="text" name="lname" /><br />
+		E-mail: <input type="email" name="email" autocomplete="off" /><br />
+		Number: <input type="number"/><br />
+		search: <input type="search"/><br />
+		range: <input type="range" name="points" min="1" max="10" /><br />
+		url: <input type="url" name="user_url" /><br />
+		Date: <input type="date" name="user_date" /><br />
+
+		list属性：<input type="text" list="show">
+		<datalist id="show">
+			<option value="1">1</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</datalist>
+
+
+	</form>
+	
+	<hr>
+	<h1>canvas</h1>
+	<canvas id="my_canvas" width="200" height="100" style="border: 1px solid #000;"></canvas>
+	<script>
+		var my_canvas = document.getElementById('my_canvas'); // 找到画布
+		var can       = my_canvas.getContext("2d"); // 获取画布
+			can.moveTo(0,0); // 定义起始位置
+			can.lineTo(200,100); // 划线的终点位置。
+			can.stroke(); // 开始画
+	</script>
+
+
+
+	<hr>
+	<h1>svg</h1>
+	<style>.svg_left{float: left;}</style>
+	<div class="svg_left">
+	svg
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+		<polygon points="100,10 40,180 190,60 10,60 160,180"
+			style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+		</svg>
+	</div>
+	<div class="svg_left">
+		img
+		<img src="../images/star.png" alt="">
+	</div>
+	<div style="clear:both"></div>
+
+ 	<hr>
+ 	<h1>获取地理位置</h1>
+	<p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+	<button onclick="getLocation()">点我</button>
+	<script>
+	var x=document.getElementById("demo");
+	function getLocation()
+	{
+		if (navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(function(position)
+			{
+				console.log(position);
+				x.innerHTML="纬度: " + position.coords.latitude + 
+				"<br>经度: " + position.coords.longitude + 
+				"<br /><a href='http://www.gpsspg.com/maps.htm' target='_blank'>查询:"+position.coords.latitude+','+position.coords.longitude+"</a>";
+			});
+		}
+		else
+		{
+			x.innerHTML="该浏览器不支持获取地理位置。";
+		}
+	}
+	</script>
+
+</body>
+</html>

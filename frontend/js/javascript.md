@@ -1,5 +1,5 @@
 [TOC]
- 
+
 # JavaScript基础入门
 >推荐的学习网站 [MDN](https://developer.mozilla.org)
 ## JavaScript简介 <sup>[注](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Introduction)</sup>
@@ -32,7 +32,7 @@ JavaScript 和 Java 有一些共性但是在另一些方面有着根本性区别
 JavaScript 区分大小写，使用 Unicode 字符集。
 
 ## 语法与数据类型 <sup>[注](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)</sup>
- 
+
 ### 注释
 >注释的语法跟 C++ 和 JAVA 、PHP 等许多其他语言相同：
 
@@ -50,7 +50,7 @@ JavaScript 区分大小写，使用 Unicode 字符集。
 	 */
 	---
 	/* 但是, 你不能, /* 嵌套注释 */ 语法错误 */
-``` 
+```
 ### 变量声明
 - **<span style="color: red">var</span> （声明一个变量，可选择将其初始化为一个值。）**
 - let （声明一个块作用域的<span style="color:red">局部变量</span>(block scope local variable)，可选择将其初始化为一个值。）

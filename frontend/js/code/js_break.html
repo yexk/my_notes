@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="show">
+		
+	</div>
+
+
+	<script>
+	var x = 0;
+	var z = 0
+	labelCancelLoops: while (true) {
+	    console.log("外=: " + x);
+	    x += 1;
+	    z = 1;
+	    while (true) {
+	        console.log("内===: " + z);
+	        z += 1;
+	        if (z === 3 && x === 3) {
+	            break labelCancelLoops;
+	        } else if (z === 3) {
+	            break;
+	        }
+	    }
+	}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Closures</title>
+</head>
+<body>
+	<script>
+	
+	function A()
+	{
+		var x = 100;
+		return function()
+		{
+			console.log(x);
+		}
+	}
+	var ab = A();
+	ab();
+	</script>
+</body>
+</html>

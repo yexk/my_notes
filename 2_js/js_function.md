@@ -1,9 +1,9 @@
-[TOC]
+[TOC] 
 
-#函数 <sup>[注](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions)</sup>
+# 函数 <sup>[注](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions)</sup>
 >函数是搭建JavaScript块的基本构件之一。一个函数本身就是一段JavaScript程序——包含用于执行某一任务或计算的一系列语句。要使用某一个函数，你必需在想要调用这个函数的执行域的某处定义它。
 
-###定义函数(Defining function)
+### 定义函数(Defining function)
 >一个函数的定义（也称为函数的声明）由一系列的函数关键词组成, 依次为：
 
 - 函数的关键字（function）
@@ -68,7 +68,7 @@ function [name]([param] [, param] [..., param]) { statements }
 
 [示例代码](./code/js_function.html)
 
-###参数(arguments)对象
+### 参数(arguments)对象
 >arguments 是一个类数组对象。代表传给一个function的参数列表。
 arguments 对象是函数内部的本地变量；arguments 已经不再是函数的属性了。
 
@@ -90,7 +90,7 @@ arguments 对象是函数内部的本地变量；arguments 已经不再是函数
 
 `注意： arguments 变量只是 "类数组对象"，并不是一个数组。称其为类数组对象是说它有一个索引编号和Length属性。尽管如此，它并不拥有全部的Array对象的操作方法。`
 
-###闭包(Closures)
+### 闭包(Closures)
 >闭包是JavaScript中最强大的特性之一。
 <span style="color:red">闭包是一个可以自己拥有独立的环境与变量的的表达式（通常是函数）。</span>
 	---
@@ -110,7 +110,7 @@ A()()
 [示例代码](./code/js_Closures.html)
 引用：变量的作用域的概念
 
-###Function构造函数 vs 函数声明 vs 函数表达式
+### Function构造函数 vs 函数声明 vs 函数表达式
 对比下面的例子：
 一个用Function构造函数定义的函数,被赋值给变量multiply:
 ```JavaScript
@@ -134,7 +134,7 @@ A()()
 虽然有一些细微的差别，但所起的作用都差不多：
 >函数名和函数的变量存在着差别。函数名不能被改变，但函数的变量却能够被再分配。函数名只能在函数体内使用。倘若在函数体外使用函数名将会导致错误（如果函数之前是通过一个var语句声明的则是undefined）。
 
-###附录：
+### 附录：
 JavaScript内置函数
 >Array数组
 

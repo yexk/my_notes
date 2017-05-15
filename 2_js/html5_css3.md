@@ -1,6 +1,4 @@
-
-
-##HTML5介绍
+## HTML5介绍
 
 2009 html5
 2014 html5 正式发布
@@ -8,7 +6,7 @@
 	html5是html的下一代吗？
 >答案：很明显不是的。html5前身是web application ( [WHATWG](http://baike.baidu.com/link?url=xZlYpiXKGUcx-L6FVXa0PWLX7EIkuL-6ZUzXAKNiAi_jmmrXs1MyxosSdhFd41Fyy_O7bXqulYQm52h-fFPjyK) =&gt; [W3C](http://baike.baidu.com/item/%E4%B8%87%E7%BB%B4%E7%BD%91%E8%81%94%E7%9B%9F?fromtitle=w3c&fromid=216888&type=syn) )
 
-###HTML5 的引用场景
+### HTML5 的引用场景
 - 极具表现力的网页。
 >一般互联网企业都已经使用了html5了。[阿里云](https://www.aliyun.com) 、 京东 、淘宝 、内网系统 。。。
 - 网页应用程序
@@ -16,7 +14,7 @@
 - 混合式应用程序
 >网易云音乐 、 有道词典  。。。
 
-###HTML5 新增
+### HTML5 新增
 - 标签
 	- （语义化标签）&lt;header&gt;、&lt;footer&gt;、&lt;nav&gt;、&lt;article&gt;、&lt;aside&gt; 。。。
 	- （应用程序标签） &lt;audio&gt;、&lt;video&gt;、&lt;canvas&gt; 
@@ -37,7 +35,7 @@
 
 	[示例代码](./code/html5.html)
 
-##CSS3介绍
+## CSS3介绍
 
 - 选择器(selector)
 	- 属性选择器（[attribute=value]）
@@ -49,8 +47,9 @@
 	- box-shadow（边框阴影）
 	- border-image（边框图片）
 - 弹性盒子(Flex Box)
->一种当页面需要<span style="color:red">适应不同的屏幕大小以及设备类型</span>时确保元素拥有<span style="color:red">恰当</span>的行为的布局方式。
->引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的<span style="color:red">子</span>元素进行<span style="color:red">排列、对齐和分配空白空间。</span>
+> 一种当页面需要<span style="color:red">适应不同的屏幕大小以及设备类型</span>时确保元素拥有<span style="color:red">恰当</span>的行为的布局方式。
+> 引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的<span style="color:red">子</span>元素进行<span style="color:red">排列、对齐和分配空白空间。</span>
+
 - 文字特效
 	- 文字阴影（text-shadow）
 	- 文字模糊

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 全局变量 x
+		var x = 10;
+		// 常量 z
+		const z = 3.14;
+		function f1() {
+			// 局部变量 y
+			let y = 100;
+			console.log('局部的x='+x);
+			console.log('局部的y='+y);
+		}
+		
+		f1();
+		console.log('全局的x='+x);
+		console.log('全局的y='+y);
+		
+		// 常量不能被修改
+		z = 100;
+		console.log('常量z='+z);
+	</script>	
+</body>
+</html>
