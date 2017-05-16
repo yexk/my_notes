@@ -1,0 +1,5 @@
+{
+	"parser": "github",
+	"enable_highlight": true,
+	"strip_critic_marks": "github",
+}
