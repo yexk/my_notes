@@ -114,5 +114,109 @@
 
 附录：[console对象的其他方法](readme.md)
 
+### 控制台断点调试
+```
+推荐指数 ：***
+调试难度 ：****
+实用性   ：** 
+```
+有很多时候想知道代码是怎么走的。想看看整个函数是怎么执行的。通过alert弹窗提示和console控制台打印都太麻烦了。而且执行流程还是看的不清晰。在编程领域有个调试方式很好用并且很很简洁明了的，那就是`断点调试`。
+<br>首先我们来看看控制台的调试界面：
+![images/1_3_sources.png](images/1_3_sources.png)
+
+1. **文档树**：显示当前文档引用的文档关系。
+2. **源码区**：显示你选择的文件的源码。并且可以查看文件源码，加断点。
+3. **监听区**：查看你添加的监听事件或者变量。
+
+**例如**：看看看循环体是怎么走的？([1_3_forfor.html](demo_test/1_3_forfor.html))
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var even = 0,odd = 0 ;
+		for (var i = 0; i < 6; i++) {
+			if (0 == i%2) {
+				even++;
+			}else{
+				odd++;
+			}
+		}
+	</script>
+</body>
+</html>
+```
+这里可以在for循环的开始进行打断点调试。
+步骤：
+
+1. 选择需要查看的文件，找对应的代码段。
+2. 给想查看的代码段前加上断点。（在行号处单击）
+3. 监听想看的的变量。选中->右键->Add selected text to watches
+4. 刷新页面，js代码会停止在断点的位置。
+5. 点击监听窗口的下一步（或者按F11）。
+6. 根据业务逻辑查看代码的走向，看看是否正确。然后在做对应的修复。
+
+> 打上断点后再次单击就是取消断点。
+
+结果：
+![images/1_4_point.gif](images/1_4_point.gif)
+
+通过断点，监听了三个变量，我们可以看到详细的代码执行流程和变量的赋值情况。
+
+> 断点调试，虽然好用，但总觉得有点大材小用。
+> 
+> **优点**：调试过程非常明了，效果明显且效率高。
+> **缺点**：当引用了jQuery的DOM操作的时候调试起来比较鸡肋。
+
+### Chrome DevTools远程调试
+```
+推荐指数 ：*
+调试难度 ：*
+实用性   ：*
+```
+移动开发最头痛的是调试，想要看看手机端里面的页面有什么问题。
+
+
+### weinre调试
+```
+推荐指数 ：***
+调试难度 ：***
+实用性   ：***
+```
+上述所说的问题有一定的局限性。必须是PC和手机都有chrome浏览器，然后需要数据线连接。这样并不方便调试兼容性且麻烦。
+> Weinre(WebInspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，借助于网络，可以在PC上直接调试运行在移动设备上的远程页面，中文意思是远程Web检查器，有了Weinre，在PC上可以即时修改目标网页的HTML/CSS/JavaScript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不支持断点调试
+
+**安装前提：**
+<span style="color:#f0f">需要`nodejs`环境。安装node教程请自行度娘。占位飞机：[nodejs教程](../nodejs/nodejs_install.md)</span>
+
+**安装weinre**
+`npm -g install weinre`  //安装weinre  
+![images/weinre_install.png](images/weinre_install.png)
+> 这里我使用了淘宝镜像（cnpm）。
+
+**启动**
+```shell
+// 语法: weinre --boundHost [hostname | ip address |-all-]  --httpPort [port]  //启动weinre
+	weinre --boundHost -all-  --httpPort 8080
+```
+![images/weinre_start.png](images/weinre_start.png)
+
+通过浏览器（推荐使用PC端）访问就应该可以看到这个界面。
+![images/weinre_page.png](images/weinre_page.png)
+
+x
+
+
+
+
+
+
+
+
+
 > 我个人一般而且强力推第三种，浏览器控制台够用了。
 > 正所谓调试页面的方法千千万，找到合适自己的就好。
