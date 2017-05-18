@@ -174,18 +174,43 @@
 
 ### Chrome DevTools远程调试
 ```
-推荐指数 ：*
-调试难度 ：*
-实用性   ：*
+推荐指数 ：**
+调试难度 ：**
+实用性   ：**
 ```
 移动开发最头痛的是调试，想要看看手机端里面的页面有什么问题。
+> 调试前提
+
+1. 必须在PC端和移动端都配置安装好chrome浏览器。
+2. 必须用数据线与电脑连接。
+
+> 这个有点像chrome里面的移动设备模式。调试模式基本差不多。
+
+调试步骤：
+1. 在PC和Android手机都装好chrome浏览器。
+2. 手机连接到PC，并且装好驱动。打开开发者权限-USB调试功能。
+![images/android_use.png](images/android_use.png)
+3. 在手机端的chrome浏览器访问需要调试的页面。
+4. 在PC端的chrome浏览器输入：`chrome://inspect`。
+![images/chrome_inspect.png](images/chrome_inspect.png)
+5. 点击“inspect”,就会弹出控制台。
+![images/chrome_usb_debuger.png](images/chrome_usb_debuger.png)
+> 图中的手机是真机设备。并不是浏览器自带的。当PC浏览器在调试的时候手机界面也会跟着动。实现同步。
+
+调试演示：
+![images/chrome_demo.gif](images/chrome_demo.gif)
+
+> 接下来就可以和浏览器的控制台一样自行调试了。
+> 
+> **优点**：调试过程非常明了，效果明显且效率高。
+> **缺点**：需要真机。
 
 
 ### weinre调试
 ```
-推荐指数 ：***
-调试难度 ：***
-实用性   ：***
+推荐指数 ：*
+调试难度 ：*
+实用性   ：*
 ```
 上述所说的问题有一定的局限性。必须是PC和手机都有chrome浏览器，然后需要数据线连接。这样并不方便调试兼容性且麻烦。
 > Weinre(WebInspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，借助于网络，可以在PC上直接调试运行在移动设备上的远程页面，中文意思是远程Web检查器，有了Weinre，在PC上可以即时修改目标网页的HTML/CSS/JavaScript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不支持断点调试
@@ -208,15 +233,25 @@
 通过浏览器（推荐使用PC端）访问就应该可以看到这个界面。
 ![images/weinre_page.png](images/weinre_page.png)
 
-x
+启动来之后需要配置后才能使用。在需要调试的代码中添加一个脚本文件
+```html
+<script src="http://192.168.10.24:8080/target/target-script-min.js#anonymous"></script>
+<!-- 把IP地址换成局域网上的ip，端口改成刚刚启动时候配置的。 -->
+```
+点击“Access Points”下的那个连接：`http://127.0.0.1:8080/client/#anonymous`
+可以看到这个界面：
+![images/weinre_connect_success.png](images/weinre_connect_success.png)
 
+> 如果targets显示none就代表没配置成功或者没有打开配置好需要调试的页面。如果显示绿色表示已经监听到事件页面了。
 
+所有的配置以及完成了。接下来就看看效果。
+![images/weinre_demo.gif](images/weinre_demo.gif)
 
+> 接下来就可以拥有调试里面的样式等等。不过这个功能配置相对麻烦。。一般都不会使用。
+> 
+> **优点**：调试过程非常明了，效果明显且效率高。
+> **缺点**：配置比较麻烦，并且调试没有浏览器自带的控制台利索，不怎么好用。 
 
-
-
-
-
-
+## 结语
 > 我个人一般而且强力推第三种，浏览器控制台够用了。
 > 正所谓调试页面的方法千千万，找到合适自己的就好。

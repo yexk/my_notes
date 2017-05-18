@@ -1,5 +1,5 @@
 
-###1.js数组去重
+### 1.js数组去重
 ~~~JavaScript
 // 数组去重
 Array.prototype.ye_unique = function(){
@@ -15,7 +15,7 @@ Array.prototype.ye_unique = function(){
 }
 ~~~
 
-###2. js mac地址转成10进制数
+### 2. js mac地址转成10进制数
 ```JavaScript
 /**
  * mac地址转成10进制数
@@ -49,7 +49,7 @@ function mac_string_to_int(mac) {
 }
 ```
 
-###3. js mac地址的十进制数转成十六进制数
+### 3. js mac地址的十进制数转成十六进制数
 ```JavaScript
 /**
  * mac地址的十进制数转成十六进制数
@@ -73,7 +73,7 @@ function mac_int_to_string(str) {
 }
 ```
 
-###4. js 重复输出某串字符
+### 4. js 重复输出某串字符
 ```JavaScript
     /**
      * 重复输出某串字符
@@ -88,7 +88,7 @@ function mac_int_to_string(str) {
     }
 
 ```
-###5. 获取get方式的值。
+### 5. 获取get方式的值。
 ```JavaScript
     /**
      * 获取get方式的键值对。
@@ -111,7 +111,7 @@ function mac_int_to_string(str) {
     }
 ```
 
-###6. 默认PHP的date函数
+### 6. 默认PHP的date函数
 ```JavaScript
 /**
  * 模拟PHP的date函数
@@ -390,7 +390,7 @@ function date(format, timestamp) {
 
 ```
 
-###7. 从字符串末尾开始去掉字符。
+### 7. 从字符串末尾开始去掉字符。
 ```JavaScript    
 /**
  * 从末尾开始去掉字符串，保留前面的字符串。
