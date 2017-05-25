@@ -1,6 +1,6 @@
-#MySQL遇到的问题
+# MySQL遇到的问题
 
-##mysql5.7中datetime默认值设置0000-00-00失败的问题
+## mysql5.7中datetime默认值设置0000-00-00失败的问题
 > 问题：mysql5.7之后版本datetime默认值设置'0000-00-00'，出现异常：Invalid default value for 'create_time'
 
 ```mysql
