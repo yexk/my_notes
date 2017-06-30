@@ -19,7 +19,7 @@
 
 
 ## 后台篇
-- [lavavel框架学习](backend/laravel/README.md)
+- [lavavel框架学习](backend/README.md)
 
 
 ## 个人精华篇

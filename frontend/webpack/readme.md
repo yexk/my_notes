@@ -36,3 +36,6 @@ npm install webpack --save-dev #这是开发才需要的所以放到dev下。
 }
 
 ```
+
+### 写代码
+一般现在开发目录分成`src`目录和`dist`、`build`目录。一般前者`src`目录用于开发时候写的代码。后者`dist`、`build`目录用于webpack构建生成的目录。

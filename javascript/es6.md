@@ -47,3 +47,6 @@
 	console.log(`your num is ${num}`);
 	// 注意：
 ```
+
+
+ES6和ES5的对比：[http://es6-features.org](http://es6-features.org) 
