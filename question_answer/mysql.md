@@ -22,3 +22,12 @@ CREATE TABLE `test` (
 最后重启再导入就行了。
 
 > 附上原文链接 http://blog.csdn.net/sd4493091/article/details/54947851 (此处对原文稍作修改)
+
+
+## MySQL解决[Err] 1206 - The total number of locks exceeds the lock table size问题
+> 默认缓冲区的文件大小问题。。
+
+在配置文件改成一个较大的大小就行。
+```
+innodb_buffer_pool_size = 2G
+```
