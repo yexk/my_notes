@@ -52,8 +52,10 @@ class TestController extends Controller
      */
     public function __construct()
     {
+        // 使用 auth 中间件验证
         $this->middleware('auth');
 
+        // 使用 log 中间件，但只对 index 方法有效
         $this->middleware('log')->only('index');
 
         $this->middleware('subscribed')->except('store');
@@ -92,3 +94,4 @@ Route::resource('photos', 'ArticleController');
 | GET |	/photos/{photo}/edit | edit | photos.edit |
 | PUT/PATCH  | /photos/{photo} | update | photos.update |
 | DELETE |	/photos/{photo} | destroy | photos.destroy |
+

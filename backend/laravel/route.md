@@ -48,6 +48,24 @@ Route::get('show',function(){
 
 ![images/Laravel_route_demo1.png](images/Laravel_route_demo1.png)
 
+## 命名路由
+命名路由可以方便的生成 `URL` 或者重定向到指定的路由，你可以在定义路由后使用 `name` 方法实现：
+```php
+Route::get('user/profile', function () {
+    //
+})->name('profile');
+// 或者
+Route::get('user/profile', 'UserController@showProfile')->name('profile');
+```
+页面生成url方法实现：
+```php
+// 生成 URL...
+$url = route('profile');
+
+// 生成重定向...
+return redirect()->route('profile');
+```
+
 
 ## 路由参数#
 
@@ -144,4 +162,16 @@ Route::get('blog','BlogController@index');
 详细方法到控制器绑定方法请移步到 : [控制器路由绑定](controller.md)
 
 ## 跨站请求伪造 ( CSRF )
-暂时略
+> Laravel 提供了简单的方法使你的应用免受 跨站请求伪造 (CSRF) 的袭击。跨站请求伪造是一种恶意的攻击，它凭借已通过身份验证的用户身份来运行未经过授权的命令。
+
+功能实现：   
+任何情况下在你的应用程序中定义 HTML 表单时都应该包含 CSRF 令牌隐藏域，这样 CSRF 保护中间件才可以验证请求。辅助函数 `csrf_field` 可以用来生成令牌字段：
+```html
+<form method="POST" action="/profile">
+    {{ csrf_field() }}
+    ...
+</form>
+```
+包含在 `web` 中间件组里的 `VerifyCsrfToken` 中间件会自动验证请求里的令牌 `token` 与 `Session` 中存储的令牌 `token` 是否匹配。
+
+> 该功能可以简单的理解为生活中的钥匙（Token），我们访问这个房子（网站）的时候就要带上这个钥匙。否则就不让你进去。

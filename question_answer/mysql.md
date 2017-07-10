@@ -31,3 +31,8 @@ CREATE TABLE `test` (
 ```
 innodb_buffer_pool_size = 2G
 ```
+
+## mysql的蠕虫复制
+```mysql
+insert into test1 (name) select name from test1;	
+```
