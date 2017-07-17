@@ -163,3 +163,16 @@
 命令：`cp php.ini-production /usr/local/php/lib/php.ini`
 > 重启Apache。这样配置文件就加载上了。。
 
+
+---
+
+
+### 问题：AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using localhost.localdomain. Set the 'ServerName' directive globally to suppress this message
+
+> 解决办法是:
+vim /你的httpd路径/httpd.conf
+```shell
+#SeverName www.expample.com:80
+# 改成
+SeverName 127.0.0.1	
+```
