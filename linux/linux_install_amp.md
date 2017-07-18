@@ -113,6 +113,8 @@
 2. **配置**。这里的配置需要自己按需加载。需要开启什么扩展就添加什么扩展。
 	> 这是我安装的扩展。仅供参考。
 	命令：`./configure --prefix=/usr/local/php --with-mysql=mysqlnd --with-mysqli=mysqlnd  --with-apxs2=/usr/local/apache2/bin/apxs --enable-sysvsem --with-curl --enable-mbregex  --enable-mbstring --with-mcrypt --with-gd --with-mhash --enable-sockets --with-xmlrpc --with-zlib --enable-pdo --with-pdo-mysql=mysqlnd`
+	
+	> php 7.0 不支持mysql了。。需去掉`--with-mysql` 选项
 
 	**小插曲**
 	![images/php_config_errr.jpg](images/php_config_errr.jpg)

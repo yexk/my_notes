@@ -36,3 +36,18 @@ innodb_buffer_pool_size = 2G
 ```mysql
 insert into test1 (name) select name from test1;	
 ```
+
+# 开启远程访问
+相对而言，改表法比较容易一点，个人也是比较倾向于使用这种方法，因此，这里只贴出改表法
+1、登陆mysql
+```
+mysql -u root -p
+```
+
+2、修改mysql库的user表，将host项，从localhost改为%。%这里表示的是允许任意host访问，如果只允许某一个ip访问，则可改为相应的ip，比如可以将localhost改为192.168.2.135，这表示只允许局域网的192.168.2.135这个ip远程访问mysql。
+```
+mysql> use mysql;   
+mysql> update user set host = '%' where user = 'root';   
+mysql> select host, user from user;   
+mysql> flush privileges;  
+```
