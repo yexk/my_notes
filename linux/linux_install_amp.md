@@ -163,6 +163,29 @@
 命令：`cp php.ini-production /usr/local/php/lib/php.ini`
 > 重启Apache。这样配置文件就加载上了。。
 
+# 2017年7月18日 更新mariadb
+文件下载: [mariadb-10.2.7-linux-systemd-x86_64.tar.gz](https://downloads.mariadb.org/interstitial/mariadb-10.2.7/bintar-linux-systemd-x86_64/mariadb-10.2.7-linux-systemd-x86_64.tar.gz/from/http%3A//mirrors.tuna.tsinghua.edu.cn/mariadb/)
+```shell
+	
+    The basic commands that you must execute to install and use a
+    MariaDB binary distribution are:
+ 
+ shell> groupadd mysql
+ shell> useradd -g mysql mysql
+ shell> cd /usr/local
+ shell> gunzip < /path/to/mysql-VERSION-OS.tar.gz | tar xvf -
+ shell> ln -s full-path-to-mysql-VERSION-OS mysql
+ shell> cd mysql
+ shell> chown -R mysql .
+ shell> chgrp -R mysql .
+ shell> scripts/mysql_install_db --user=mysql
+ shell> chown -R root .
+ shell> chown -R mysql data
+ shell> bin/mysqld_safe --user=mysql &
+```
+
+
+
 
 ---
 
