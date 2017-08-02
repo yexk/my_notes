@@ -201,3 +201,4 @@ vim /你的httpd路径/httpd.conf
 # 改成
 SeverName 127.0.0.1	
 ```
+### php无需编译安装openssl扩展
