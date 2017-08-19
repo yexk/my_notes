@@ -1,3 +1,7 @@
+## 重要的通知
+这里面的笔记已经不再提供更新。需要查看最新版，请移步到[https://github.com/yexk/yexk.github.io](https://github.com/yexk/yexk.github.io)
+> 2017年8月19日 by Yexk
+
 # Yexk笔记本大全
 
 ## 快速入门篇
