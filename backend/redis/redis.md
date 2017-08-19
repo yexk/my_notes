@@ -52,12 +52,27 @@ Redis 中每个 hash 可以存储 232 - 1 键值对（40多亿）。
 | 查 | 1.`LRANGE key start stop`<br>2.`LINDEX key index`<br>3.`LLEN key`   | 1.获取列表指定范围内的元素<br>2.通过索引获取列表中的元素<br>3.获取列表长度  |
 
 ## Redis 集合(Set)
-#### 增
-#### 删
-#### 改
-#### 查
+> Redis的Set是string类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。
+Redis 中 集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。
+集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)。
+
+| 操作 |  命令 | 说明 | 
+| -- | -- | -- |
+| 增 | 1.`SADD key member1 [member2]`<br>2.`SUNIONSTORE destination key1 [key2]`<br>3.`SSCAN key cursor [MATCH pattern] [COUNT count]`  | 1.向集合添加一个或多个成员<br>2.所有给定集合的并集存储在 destination 集合中<br>3.迭代集合中的元素 |
+| 删 | 1.`SPOP key`<br>2.`SREM key member1 [member2]`  | 1.移除并返回集合中的一个随机元素<br>2.移除集合中一个或多个成员  |
+| 改 | 同`增`<br>1.`SMOVE source destination member`   | 1.将 `member` 元素从 `source` 集合移动到 `destination` 集合  |
+| 查 | 1.`SMEMBERS key`<br>2.`SDIFF key1`<br>3.`SINTER key1 [key2]`<br>4.`SUNION key1 [key2]`<br>5.`SRANDMEMBER key [count]`<br>6.`SDIFFSTORE destination key1 [key2]`<br>7.`SINTERSTORE destination key1 [key2]`<br>8.`SCARD key`<br>9.`SISMEMBER key member`  | 1.返回集合中的所有成员<br>2.返回给定所有集合的**差集**<br>3.返回给定所有集合的**交集**<br>4.返回所有给定集合的**并集**<br>5.返回集合中一个或多个随机数<br>6.返回给定所有集合的**差集**并存储在 destination 中<br>7.返回给定所有集合的**交集**并存储在 destination 中<br>8.获取集合的成员数(长度) <br>9.判断 `member` 元素是否是集合 `key` 的成员  |
+
+
 ## Redis 有序集合(sorted set)
-#### 增
-#### 删
-#### 改
-#### 查
+> Redis 有序集合和集合一样也是string类型元素的集合,且不允许重复的成员。
+不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。
+有序集合的成员是唯一的,但分数(score)却可以重复。
+集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。 集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)。
+
+| 操作 |  命令 | 说明 | 
+| -- | -- | -- |
+| 增 |    |    |
+| 删 |    |    |
+| 改 |    |    |
+| 查 | 1.`ZCARD key`<br> 2.`ZCOUNT key min max`<br> 3.`ZINTERSTORE destination numkeys key [key ...]`<br> 4.`ZLEXCOUNT key min max`<br> 5.`ZRANGE key start stop [WITHSCORES]`<br> 6.`ZRANGEBYLEX key min max [LIMIT offset count]`<br> 7.`ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT]`<br> 8.`ZRANK key member`<br> 9.`ZREVRANGE key start stop [WITHSCORES]`<br> 10.`ZREVRANGEBYSCORE key max min [WITHSCORES]`<br> 11.`ZREVRANK key member`<br> 12.`ZSCORE key member` | 1.获取有序集合的成员数<br> 2.计算在有序集合中指定区间分数的成员数<br> 3.计算给定的一个或多个有序集的交集并将结果集存储在新的有序集合 key 中<br> 4.在有序集合中计算指定字典区间内成员数量<br> 5.通过索引区间返回有序集合成指定区间内的成员<br> 6.通过字典区间返回有序集合的成员<br> 7.通过分数返回有序集合指定区间内的成员<br> 8.返回有序集合中指定成员的索引<br> 9.返回有序集中指定区间内的成员，通过索引，分数从高到底<br> 10.返回有序集中指定分数区间内的成员，分数从高到低排序<br> 11.返回有序集合中指定成员的排名，有序集成员按分数值递减(从大到小)排序<br> 12.返回有序集中，成员的分数值 |
