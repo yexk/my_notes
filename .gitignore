@@ -1,1 +1,3 @@
 /frontend/vuejs/demo/.idea
+/node_modules
+yarn.lock
