@@ -1,10 +1,14 @@
 {
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
     "@vuepress/plugin-nprogress": "^1.0.0-rc.1"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
   }
 }

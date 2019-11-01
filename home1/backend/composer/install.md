@@ -75,7 +75,7 @@ composer config repo.packagist composer https://packagist.phpcomposer.com
 
 上述命令将会在当前项目中的 composer.json 文件的末尾自动添加镜像的配置信息（你也可以自己手工添加）：
 
-```
+```json
 "repositories": {
     "packagist": {
         "type": "composer",
@@ -86,7 +86,7 @@ composer config repo.packagist composer https://packagist.phpcomposer.com
 
 以 laravel 项目的 composer.json 配置文件为例，执行上述命令后如下所示（注意最后几行）：
 
-```
+```json
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
@@ -112,7 +112,8 @@ composer config repo.packagist composer https://packagist.phpcomposer.com
 OK，一切搞定！试一下 composer install 来体验飞一般的速度吧！
 
 查看修改成功了没有？
-```shell
+
+```sh
 修改前
 # composer config -g -l
 [repositories.packagist.org.type] composer
