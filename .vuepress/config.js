@@ -10,7 +10,7 @@ module.exports = {
     '@vuepress/back-to-top',
     '@vuepress/nprogress',
     [
-      '@vuepress/medium-zoom', 
+      '@vuepress/medium-zoom',
       {
         options: {
           margin: 16
@@ -45,13 +45,13 @@ module.exports = {
           title: '主页',   // 必要的
           path: '/home/',        // 可选的, 应该是一个绝对路径
           collapsable: false,    // 可选的, 默认值是 true,
-          children: [ 'test' ]
+          children: getDir('home')
         },
         {
           title: 'JavaScript',   // 必要的
           path: '/home/javascript/',        // 可选的, 应该是一个绝对路径
           collapsable: false,    // 可选的, 默认值是 true,
-          children: getDir('home/javascript', 'javascript/') 
+          children: getDir('home/javascript', 'javascript/')
         },
         {
           title: 'PHP',       // 必要的
@@ -69,7 +69,7 @@ module.exports = {
         },
       ],
       '/about/': {
-      	sidebar: 'auto'
+        sidebar: 'auto'
       },
     },
     lastUpdated: '上次更新',
@@ -95,18 +95,14 @@ function getDir(pathDir = '', PPath = '') {
       try {
         let stats = fs.statSync(file)
         let isFile = stats.isFile();
-        let isDirectory = stats.isDirectory();
 
-        if (isDirectory) {
-          _(file, true);
-
-        }else if (isFile && path.extname(v) == '.md' && v != 'README.md') {
-            if (flag) {
-              let parentPath = path.dirname(file).split(path.sep);
-              fr.push(PPath + parentPath[parentPath.length-1] + '/' + path.parse(v).name)
-            } else {
-              fr.push(PPath + path.parse(v).name)
-            }
+        if (isFile && path.extname(v) == '.md' && v != 'README.md') {
+          if (flag) {
+            let parentPath = path.dirname(file).split(path.sep);
+            fr.push(PPath + parentPath[parentPath.length - 1] + '/' + path.parse(v).name)
+          } else {
+            fr.push(PPath + path.parse(v).name)
+          }
         }
       } catch (error) {
         console.warn('获取文件!' + error);
