@@ -59,6 +59,18 @@ module.exports = {
           collapsable: false, // 可选的, 默认值是 true,
           children: getDir('home/php', 'php/')
         },
+        {
+          title: 'JAVA',       // 必要的
+          path: '/home/java/', // 可选的, 应该是一个绝对路径
+          collapsable: false, // 可选的, 默认值是 true,
+          children: getDir('home/java', 'java/')
+        },
+        {
+          title: 'Python',       // 必要的
+          path: '/home/python/', // 可选的, 应该是一个绝对路径
+          collapsable: false, // 可选的, 默认值是 true,
+          children: getDir('home/python', 'python/')
+        },
       ],
       '/tsgroup/': [
         {

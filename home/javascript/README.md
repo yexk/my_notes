@@ -1,6 +1,1 @@
 # JavaScript
-
-asdfas
-
-asfass
-s
