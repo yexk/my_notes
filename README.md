@@ -16,6 +16,10 @@ footer: MIT Licensed | Copyright © 2020-present Yexk
 
 # Yexk笔记本大全:100:
 
+[![GitHub stars](https://img.shields.io/github/stars/yexk/my_notes?style=for-the-badge)](https://github.com/yexk/my_notes/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yexk/my_notes?style=for-the-badge)](https://github.com/yexk/my_notes/network)
+[![GitHub issues](https://img.shields.io/github/issues/yexk/my_notes?style=for-the-badge)](https://github.com/yexk/my_notes/issues)
+
 ## 快速入门篇
 
 - [HTML 快速入门](/home1/)
