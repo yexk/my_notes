@@ -11,7 +11,7 @@ features:
   details: PHP swoole 
 - title: linux
   details: Centos Ubuntu
-footer: MIT Licensed | Copyright © 2020-present Yexk z
+footer: MIT Licensed | Copyright © 2020-present Yexk
 ---
 
 # Yexk笔记本大全:100:
