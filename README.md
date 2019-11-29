@@ -49,3 +49,4 @@ footer: MIT Licensed | Copyright © 2020-present Yexk
 
 - [JavaScript 常用的函数](/home1/javascript/common_function.md)
 - [php 常用的函数](/home1/php/common_function.md)
+- [xx](xx)
