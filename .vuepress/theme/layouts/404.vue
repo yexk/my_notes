@@ -5,7 +5,7 @@
       <blockquote>{{ getMsg() }}</blockquote>
       <router-link to="/">回到首页</router-link>
       <hr />
-      <p>其他文章推荐：</p>
+      <h4>其他文章推荐：</h4>
       <ul>
         <li v-for="(v,i) in page" :key="i">
           <router-link :to="v.path">{{ v.title }}</router-link>
@@ -44,7 +44,9 @@ export default {
       let arr = [];
       for (let i = 0; i < length; i++) {
         let _t = Math.floor(Math.random() * this.pages.length);
-        arr.push(this.pages[_t]);
+        if (this.pages[_t].title) {
+          arr.push(this.pages[_t]);
+        }
       }
       return arr;
     }

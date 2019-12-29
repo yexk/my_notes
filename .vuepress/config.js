@@ -6,17 +6,25 @@ const ROOT_PATH = __dirname + '/../'
 module.exports = {
   title: 'YexkM 极致分享',
   description: '一个具有幻想力的沙雕-2020',
+  head: [
+    // meta
+    ["meta", { name: "author", content: "yexk" }],
+    ["meta", { name: "keywords", content: "一个具有幻想力的沙雕-2020, blog, php, javascript, java, rust, typescript, linux, mysql" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:title", content: "Yexk 极致分享" }],
+    ["meta", { property: "og:url", content: "http://blog.yexk.cn/" }],
+    ["meta", { property: "og:site_name", content: "Yexk 极致分享" }],
+    ["meta", { property: "og:description", content: "Yexk 极致分享 - 一个具有幻想力的沙雕" }],
+    ["meta", { property: "og:locale", content: "zh-Hans" }]
+  ],
   plugins: [
     '@vuepress/back-to-top',
     '@vuepress/nprogress',
-    [
-      '@vuepress/medium-zoom',
-      {
-        options: {
-          margin: 16
-        }
-      }
-    ],
+    '@vuepress/medium-zoom',
+    '@vuepress/active-header-links',
+    ['sitemap', {
+      hostname: 'https://blog.yexk.cn'
+    }],
     [
       '@vuepress/last-updated',
       {
@@ -70,6 +78,18 @@ module.exports = {
           path: '/home/python/', // 可选的, 应该是一个绝对路径
           collapsable: false, // 可选的, 默认值是 true,
           children: getDir('home/python', 'python/')
+        },
+        {
+          title: 'RUST',       // 必要的
+          path: '/home/rust/', // 可选的, 应该是一个绝对路径
+          collapsable: false, // 可选的, 默认值是 true,
+          children: getDir('home/rust', 'rust/')
+        },
+        {
+          title: 'Other',       // 必要的
+          path: '/home/other/', // 可选的, 应该是一个绝对路径
+          collapsable: false, // 可选的, 默认值是 true,
+          children: getDir('home/other', 'other/')
         },
       ],
       '/tsgroup/': [
