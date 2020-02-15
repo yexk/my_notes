@@ -42,6 +42,13 @@ module.exports = {
     activeHeaderLinks: false,
     nav: [
       { text: '主页', link: '/home/' },
+      {
+        text: '指南',
+        items: [
+          { text: 'JavaScript', link: '/reference/javascript/' },
+          { text: 'TypeScript', link: '/reference/typescript/' }
+        ]
+      },
       { text: 'TS周刊2.0', link: '/tsgroup/' },
       { text: '关于', link: '/about/' },
       { text: 'GitHub', link: 'https://github.com/yexk' },
@@ -92,6 +99,22 @@ module.exports = {
           children: getDir('home/other', 'other/')
         },
       ],
+      '/reference/javascript/': [
+        {
+          title: 'JavaScript',     // 必要的
+          path: '/reference/javascript/',   // 可选的, 应该是一个绝对路径
+          collapsable: false,  // 可选的, 默认值是 true,
+          children: getDir('reference/javascript')
+        },
+      ],
+      '/reference/typescript/': [
+          {
+            title: 'TypeScript',     // 必要的
+            path: '/reference/typescript/',   // 可选的, 应该是一个绝对路径
+            collapsable: false,  // 可选的, 默认值是 true,
+            children: getDir('reference/typescript')
+          },
+        ],
       '/tsgroup/': [
         {
           title: 'TS周刊2.0',     // 必要的
