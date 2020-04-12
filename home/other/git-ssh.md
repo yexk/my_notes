@@ -17,3 +17,12 @@
 4. 在GitHub页面上的个人设置里面找到`SSH and GPG keys`，然后点击 `New SSH key`, 把刚刚创建的 `id_rsa.pub` 文件的内容添加到里面去。保存。
 
 5. 最终大工搞成。
+
+> 2020年4月12日 补充
+
+6. 第一次安装git需要设置邮箱和用户名
+```
+git config --global user.name "你的名字"
+git config --global user.email "你的邮箱@xxx.com"
+```
+   > --global 参数是设置到全局的意思，如果你只想为单一项目独立设置，就不需要，但一般都是全局设置的。
