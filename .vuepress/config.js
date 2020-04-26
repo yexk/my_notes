@@ -87,11 +87,17 @@ module.exports = {
           children: getDir('home/python', 'python/')
         },
         {
-          title: 'RUST',       // 必要的
-          path: '/home/rust/', // 可选的, 应该是一个绝对路径
+          title: 'Golang',       // 必要的
+          path: '/home/go/', // 可选的, 应该是一个绝对路径
           collapsable: false, // 可选的, 默认值是 true,
-          children: getDir('home/rust', 'rust/')
+          children: getDir('home/go', 'go/')
         },
+        // {
+        //   title: 'RUST',       // 必要的
+        //   path: '/home/rust/', // 可选的, 应该是一个绝对路径
+        //   collapsable: false, // 可选的, 默认值是 true,
+        //   children: getDir('home/rust', 'rust/')
+        // },
         {
           title: 'Other',       // 必要的
           path: '/home/other/', // 可选的, 应该是一个绝对路径
