@@ -1,3 +1,4 @@
+.vuepress/dist
 /frontend/vuejs/demo/.idea
 /node_modules
 package-lock.json
