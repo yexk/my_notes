@@ -10,7 +10,3 @@ RUN  npm config set registry https://registry.npm.taobao.org \
     && npm config rm https-proxy \
     && npm config set sass-binary-site http://npm.taobao.org/mirrors/node-sass \
     && npm install -g vuepress
-
-ENTRYPOINT [ "npm", "run" ]
-
-CMD  [ "dev" ]

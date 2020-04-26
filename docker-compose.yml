@@ -1,8 +1,10 @@
 version: '3'
 services:
-  mynode:
+  blog:
     build: .
-    ports:
-     - "80:8080"
     volumes: 
-    - ".:/www/project"
+      - ".:/www/project"
+    ports:
+      - "80:8080"
+    stdin_open: true
+    tty: true
