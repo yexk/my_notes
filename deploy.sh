@@ -21,7 +21,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
  
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:yexk/my_notes.git master:gh-pages
+#git push -f git@github.com:yexk/my_notes.git master:gh-pages
 
 # 注意这里是加入Travis配置的推送
 git push -f https://${TOKEN}@github.com/yexk/my_notes.git master:gh-pages  
