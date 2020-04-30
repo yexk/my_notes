@@ -10,7 +10,9 @@ cd .vuepress/dist
  
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
- 
+
+git config user.name "${USERNAME}"
+git config user.email "${EMAIL}"
 git init
 git add -A
 git commit -m 'deploy'
@@ -22,6 +24,6 @@ git commit -m 'deploy'
 git push -f git@github.com:yexk/my_notes.git master:gh-pages
 
 # 注意这里是加入Travis配置的推送
-git push -f https://${token}@github.com/yexk/my_notes.git master:gh-pages  
+git push -f https://${TOKEN}@github.com/yexk/my_notes.git master:gh-pages  
 
 cd -
