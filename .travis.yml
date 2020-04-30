@@ -8,6 +8,7 @@ cache:
     - node_modules
 before_install:
   - export TZ='Asia/Shanghai' # 设置时区
+  - npm install -g vuepress # 安装vuepress
   - chmod +x ./deploy.sh # 添加权限
 script:
   - ./deploy.sh
