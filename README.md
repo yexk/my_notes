@@ -19,6 +19,7 @@ footer: MIT Licensed | Copyright © 2020-present Yexk
 [![GitHub stars](https://img.shields.io/github/stars/yexk/my_notes?style=for-the-badge)](https://github.com/yexk/my_notes/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/yexk/my_notes?style=for-the-badge)](https://github.com/yexk/my_notes/network)
 [![GitHub issues](https://img.shields.io/github/issues/yexk/my_notes?style=for-the-badge)](https://github.com/yexk/my_notes/issues)
+[![Build Status](https://travis-ci.com/yexk/my_notes.svg?branch=master)](https://travis-ci.com/yexk/my_notes)
 
 ## 快速入门篇
 
@@ -49,4 +50,3 @@ footer: MIT Licensed | Copyright © 2020-present Yexk
 
 - [JavaScript 常用的函数](/home1/javascript/common_function.md)
 - [php 常用的函数](/home1/php/common_function.md)
-- [xx](xx)
