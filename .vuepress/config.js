@@ -4,6 +4,7 @@ const path = require("path")
 const ROOT_PATH = __dirname + '/../'
 
 module.exports = {
+  theme: 'antdocs',
   title: 'YexkM 极致分享',
   description: '一个具有幻想力的沙雕-2020',
   head: [
