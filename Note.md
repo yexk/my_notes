@@ -7,3 +7,7 @@ docker-compose up -d # 是不是要加 -d 取决于你要不要挂后台
 docker exec -it my_notes_blog_1 npm i
 docker exec -it my_notes_blog_1 npm run dev
 ```
+
+```sh
+cd /www/my_notes/ && git checkout master && git branch -D gh-pages && git checkout -b gh-pages origin/gh-pages
+```

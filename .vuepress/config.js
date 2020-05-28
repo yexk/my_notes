@@ -13,10 +13,12 @@ module.exports = {
     ["meta", { name: "keywords", content: "一个具有幻想力的沙雕-2020, blog, php, javascript, java, rust, typescript, linux, mysql" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:title", content: "Yexk 极致分享" }],
-    ["meta", { property: "og:url", content: "http://blog.yexk.cn/" }],
+    ["meta", { property: "og:url", content: "https://blog.yexk.cn/" }],
     ["meta", { property: "og:site_name", content: "Yexk 极致分享" }],
     ["meta", { property: "og:description", content: "Yexk 极致分享 - 一个具有幻想力的沙雕" }],
-    ["meta", { property: "og:locale", content: "zh-Hans" }]
+    ["meta", { property: "og:locale", content: "zh-Hans" }],
+    // tongji
+    ['script', { type: 'text/javascript', src: '/js/tongji.js' }]
   ],
   plugins: [
     '@vuepress/back-to-top',
