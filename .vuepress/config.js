@@ -48,6 +48,7 @@ module.exports = {
       {
         text: '指南',
         items: [
+          { text: '深度学习', link: '/reference/deeplearn/' },
           { text: 'JavaScript', link: '/reference/javascript/' },
           { text: 'TypeScript', link: '/reference/typescript/' }
         ]
@@ -122,6 +123,14 @@ module.exports = {
             path: '/reference/typescript/',   // 可选的, 应该是一个绝对路径
             collapsable: false,  // 可选的, 默认值是 true,
             children: getDir('reference/typescript')
+          },
+        ],
+      '/reference/deeplearn/': [
+          {
+            title: '深度学习',     // 必要的
+            path: '/reference/deeplearn/',   // 可选的, 应该是一个绝对路径
+            collapsable: false,  // 可选的, 默认值是 true,
+            children: getDir('reference/deeplearn')
           },
         ],
       '/tsgroup/': [

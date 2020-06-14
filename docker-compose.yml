@@ -6,6 +6,6 @@ services:
       - ".:/www/project"
     ports:
       - "80:8080"
-    command: "npm run dev" #该命令需要npm i 之后运行
+    # command: "npm run dev" #该命令需要npm i 之后运行
     stdin_open: true
     tty: true
