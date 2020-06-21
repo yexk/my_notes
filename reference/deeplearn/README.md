@@ -12,10 +12,10 @@
 
 建议先去听听 ![李宏毅机器学习(2017) 0-1: Introduction of Machine Learning](https://www.bilibili.com/video/BV13x411v7US?p=1) 这个也算是我的第一个老师。后续会经常出现。我也只看到了p5。
 
-![深度学习流程](images/2.png)
+![深度学习流程](./images/2.png)
 
 从这个图可以不难发现其实深度学习是有前提的，需要学习深度学习，就得先了解什么是机器学习。这里我不会再复述到视频的内容。毕竟我没有老师专业。我只告诉你们我是怎么学的。顺便把学习过程记录下来。
 
-![机器学习1](images/1.png)
+![机器学习1](./images/1.png)
 
 To be continue..
